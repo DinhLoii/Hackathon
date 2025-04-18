@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FPT University Quy Nhơn Blood Donation - Save Lives</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <img src="https://upload.wikimedia.org/wikipedia/vi/2/2d/Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_FPT.svg"
+                alt="FPT University Logo" class="logo-img">
+            REDHOPE &#10084
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#find">Find a Drive</a></li>
+                <li><a href="#donate">Donate Now</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Join FPTU Quy Nhơn Blood Donation, Save Lives</h1>
+            <p>Students, lecturers, and staff – unite to save lives with every drop at FPT University Quy Nhơn!</p>
+            <button onclick="scrollToSection('donate')" class="hero-button">Donate Now</button>
+        </div>
+        
+          
+    </section>
+    <div class="marquee">
+        <p>Register to donate blood at FPTU Quy Nhon today - Contribute to building a compassionate and vibrant student community - Join hands to donate blood - For an FPTU Quy Nhon full of love and retained heartbeats.</p>
+      </div>
+
+    <!-- About Section -->
+    <section id="about" class="about" data-aos="fade-up" data-aos-duration="1000">
+        <div class="container">
+            <h2>Why Donate Blood at FPT University Quy Nhơn?</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Blood donation at FPT University Quy Nhơn supports our community, helping students, lecturers,
+                        and staff in medical emergencies. Each donation takes just 10 minutes and can save up to 3
+                        lives. Join our campus-wide initiative to promote health and solidarity!</p>
+                    <ul class="about-benefits">
+                        <li>Boost your health and energy.</li>
+                        <li>Contribute to FPTU Quy Nhơn’s community spirit.</li>
+                        <li>Receive recognition and rewards for your contribution.</li>
+                    </ul>
+                </div>
+                <div class="about-image">
+                    <img src="https://foxnews.fpt.vn/wp-content/uploads/2023/03/Hien-mau.jpg"
+                        alt="Students donating blood at FPT University Quy Nhơn" class="optimized-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Find a Drive Section -->
+    <section id="find" class="find-drive" data-aos="fade-up" data-aos-duration="1000">
+        <div class="container">
+          <h2>Find a Donation Drive at FPTU Quy Nhơn</h2>
+        
+          <p id="result">Enter your campus or location to find a donation drive near you.</p>
+      
+          <div id="map" class="map-placeholder">
+            <iframe
+              id="mapFrame"
+              src="https://www.google.com/maps?q=FPT%20University%20Quy%20Nhon&output=embed"
+              width="100%"
+              height="500"
+              style="border:0; border-radius: 10px;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+      </section>
+
+    <!-- Donate Section -->
+    <section id="donate" class="donate">
+        <div class="container">
+            <h2>Ready to Donate at FPTU Quy Nhơn?</h2>
+            <p>Schedule your donation and join FPTU Quy Nhơn’s mission to save lives. Open to all students, lecturers,
+                and staff!</p>
+            <button class="pulse" onclick="openDonationForm()">Schedule Now</button>
+            <div class="donation-form" id="donationForm">
+                <h3>Register as a Donor</h3>
+                <form id="donorForm" onsubmit="submitDonor(event)">
+                    <input type="text" placeholder="Your Name" name="name" required>
+                    <input type="email" placeholder="Your Email" name="email" required>
+                    <input type="text" placeholder="Your Donate Blood(e.g., A+, B+, AB+, O+)" name="blood_type" required>
+                    <input type="text" placeholder="Your Location (e.g., FPTU Quy Nhơn)" name="location" required>
+                    <button type="submit">Register</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <div id="toast" class="toast"></div>
+    <!-- Eligibility Section -->
+    <section class="eligibility">
+        <div class="container">
+            <h2>Who Can Donate at FPTU Quy Nhơn?</h2>
+            <div class="eligibility-content">
+                <div class="eligibility-item">
+                    <h3>Students</h3>
+                    <p>Aged 18-25, healthy, weighing at least 50kg, and not pregnant or recently ill.</p>
+                </div>
+                <div class="eligibility-item">
+                    <h3>Lecturers & Staff</h3>
+                    <p>Healthy adults, no chronic diseases, and meeting weight/health requirements.</p>
+                </div>
+                <div class="eligibility-item">
+                    <h3>General Guidelines</h3>
+                    <p>No tattoos/piercings in the last 6 months, no alcohol 24 hours before, and eat a light meal.</p>
+                </div>
+            </div>
+            <img src="https://i.chungta.vn/2024/11/19/Anh-toan-ghep-7-1731994234_1200x0.png"
+                alt="Health check for FPTU Quy Nhơn donors" class="optimized-img">
+        </div>
+    </section>
+
+    
+
+    <section id="ranking" class="donate">
+        <div class="container">
+            <h2>🏆 Top 5 Người Hiến Máu Nhiều Nhất (3 Lần Trở Lên)</h2>
+            <table id="rankingTable">
+                <thead>
+                    <tr>
+                        <th>Hạng</th>
+                        <th>Tên</th>
+                        <th>Email</th>
+                        <th>Số lần hiến</th>
+                    </tr>
+                </thead>
+                <tbody>
+                   
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <section class="statistics">
+        <div class="container">
+          <h2>📊 Thống kê số lượng người hiến máu theo ngày và nhóm máu</h2>
+          <canvas id="bloodChart" height="100"></canvas>
+        </div>
+      </section>
+
+    <!-- Stories Section -->
+    <section class="stories">
+        <div class="container">
+            <h2>Inspiring Stories from FPTU Quy Nhơn</h2>
+            <div class="story-grid">
+                <div class="story-card">
+                    <img src="https://i.chungta.vn/2024/08/12/4-1723442667_1200x0.jpg"
+                        alt="FPTU Quy Nhơn student donating blood" class="optimized-img">
+                    <h3>Linh’s Impact</h3>
+                    <p>Linh, an FPTU Quy Nhơn student, donated blood and saved a lecturer during an emergency. Read her
+                        story!</p>
+                </div>
+                <div class="story-card">
+                    <img src="https://i.chungta.vn/2024/08/12/6a-1723442672_1200x0.jpg"
+                        alt="FPTU Quy Nhơn lecturer donating blood" class="optimized-img">
+                    <h3>Professor Nam’s Contribution</h3>
+                    <p>Professor Nam’s regular donations helped students in need. Learn more about his journey.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact FPTU Quy Nhơn Blood Donation</h2>
+            <p>For more information, email us at <a href="mailto:qnuni@fe.edu.vn">qnuni@fe.edu.vn</a> or call <a
+                    href="tel:(0256)7300999">(0256) 7300 999</a>.</p>
+            <form id="contactForm" onsubmit="submitContact(event)">
+                <input type="text" placeholder="Your Name" name="name" required>
+                <input type="email" placeholder="Your Email" name="email" required>
+                <textarea placeholder="Your Message" name="message" required></textarea>
+                <button type="submit" class="contact-button">Send Message</button>
+            </form>
+            <p class="address">Address: Khu đô thị mới An Phú Thịnh, Phường Nhơn Bình & Phường Đống Đa, TP. Quy Nhơn,
+                Bình Định</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>© 2025 FPT University Quy Nhơn Blood Donation. All rights reserved. | <a href="#privacy">Privacy
+                    Policy</a></p>
+            <div class="social-links">
+                <a href="#">Facebook</a> | <a href="#">Twitter</a> | <a href="#">Instagram</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script>
+        const hero = document.querySelector('.hero');
+        const backgrounds = [
+            'https://foxnews.fpt.vn/wp-content/uploads/2024/09/458498149_8130337840418848_6908995466659861317_n.jpg',
+            'https://daihoc.fpt.edu.vn/wp-content/uploads/2025/03/ROO-0025-01622-scaled.avif',
+            'https://i.chungta.vn/2025/04/16/-2028-1744770406.jpg'
+        ];
+    
+        let current = 0;
+    hero.style.backgroundImage = `url('${backgrounds[current]}')`; // đặt ảnh đầu tiên ngay lập tức
+
+    setInterval(() => {
+        current = (current + 1) % backgrounds.length;
+        hero.style.backgroundImage = `url('${backgrounds[current]}')`;
+    }, 5000);
+    </script>
+
+    
+   <div class="chatbox">
+        <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+        <df-messenger
+        intent="WELCOME"
+        chat-title="Red_Hope"
+        agent-id="c16e4d79-ee80-46b5-84b8-09a9a07f6673"
+        language-code="vi"
+        ></df-messenger>
+   </div>
+
+   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+ 
+    
+</body>
+
+</html> 
